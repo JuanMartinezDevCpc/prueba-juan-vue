@@ -1,4 +1,5 @@
 <template>
+    <navbarComp/>
     <div class="container mt-5">
         <h1>Listado de Usuarios</h1>
         <table class="table mt-3">
@@ -53,6 +54,7 @@
 </template>
 
 <script setup>
+import navbarComp from '../components/navbarComp.vue'
 import { onMounted, ref } from 'vue';
 import * as Service from '../services/auth'
 
