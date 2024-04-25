@@ -8,6 +8,10 @@ export function getCargos(payload){
 	return axios.get(`/cargos`, payload)
 }
 
+export function postCargo(payload) {
+	return axios.post(`/cargo`, payload)
+}
+
 export function getDepartamentos(payload){
 	return axios.get(`/departamentos`, payload)
 }

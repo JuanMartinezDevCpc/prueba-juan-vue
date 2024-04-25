@@ -15,5 +15,11 @@ export default [
         name: 'users',
         component: () => import('../../pages/users-page.vue'),
         meta: { name: 'users' },
+    },
+    {
+        path: '/cargos',
+        name: 'cargos',
+        component: () => import('../../pages/cargos-page.vue'),
+        meta: { name: 'cargos' },
     }
 ];
