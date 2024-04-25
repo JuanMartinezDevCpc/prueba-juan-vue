@@ -12,6 +12,10 @@ export function postCargo(payload) {
 	return axios.post(`/cargo`, payload)
 }
 
+export function postDepartamento(payload) {
+	return axios.post(`/departamento`, payload)
+}
+
 export function getDepartamentos(payload){
 	return axios.get(`/departamentos`, payload)
 }
@@ -29,4 +33,16 @@ export function editUser(payload, id) {
 }
 export function deleteUser(id) {
 	return axios.delete(`/user/${id}/eliminar`)
+}
+export function editCargo(payload, id) {
+	return axios.put(`/cargo/${id}/editar`, payload)
+}
+export function deleteCargo(id) {
+	return axios.delete(`/cargos/${id}/eliminar`)
+}
+export function editDepartamento(payload, id) {
+	return axios.put(`/departamento/${id}/editar`, payload)
+}
+export function deleteDepartamento(id) {
+	return axios.delete(`/departamento/${id}/eliminar`)
 }

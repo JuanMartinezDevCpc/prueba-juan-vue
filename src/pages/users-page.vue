@@ -93,7 +93,7 @@ async function editUser(item) {
 async function deleteUser(id) {
     const {data} = await Service.deleteUser(id)
     if(data.data) {
-        const idx= users.value.find((e) => e.id == id)
+        const idx= users.value.findIndex((e) => e.id == id)
         users.value.splice(idx, 1)
     }
 }

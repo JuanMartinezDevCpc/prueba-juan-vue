@@ -21,5 +21,11 @@ export default [
         name: 'cargos',
         component: () => import('../../pages/cargos-page.vue'),
         meta: { name: 'cargos' },
+    },
+    {
+        path: '/departamentos',
+        name: 'departamentos',
+        component: () => import('../../pages/departamentos-page.vue'),
+        meta: { name: 'departamentos' },
     }
 ];
