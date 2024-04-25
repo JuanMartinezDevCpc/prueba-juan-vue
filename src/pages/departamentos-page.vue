@@ -78,9 +78,13 @@ async function editDepartamento(item) {
 }
 
 async function deleteDepartamento(id) {
-    await Service.deleteDepartamento(id)
-    const idx = departamentos.value.findIndex((e) => e.id == id)
-    departamentos.value.splice(idx, 1)
+    const {data } = await Service.deleteDepartamento(id)
+    if(data.data) {
+        const idx = departamentos.value.findIndex((e) => e.id == id)
+        departamentos.value.splice(idx, 1)
+    }else {
+        console.log(data.message)
+    }
 }
 
 </script>

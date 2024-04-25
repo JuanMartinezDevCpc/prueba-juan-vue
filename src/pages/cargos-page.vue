@@ -78,9 +78,13 @@ async function editCargo(item) {
 }
 
 async function deleteCargo(id) {
-    await Service.deleteCargo(id)
-    const idx = cargos.value.findIndex((e) => e.id == id)
-    cargos.value.splice(idx, 1)
+    const { data } = await Service.deleteCargo(id)
+    if(data.data){
+        const idx = cargos.value.findIndex((e) => e.id == id)
+        cargos.value.splice(idx, 1)
+    }else {
+        console.log(data.message)
+    }
 }
 
 </script>
